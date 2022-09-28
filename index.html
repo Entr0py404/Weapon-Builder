@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+	<meta http-equiv="content-type" content="text/html, charset=utf-8" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="viewport" content="width=720, height=device-height, user-scalable=yes" />
+	<title>Weapon Builder</title>
+	<script src="javascript.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script>window.onload = function () { randomizeweapon() }</script>
+</head>
+
+<body>
+	<br>
+	<h1>Weapon Builder</h1>
+	<br>
+	<div id=root>
+		<canvas id="canvas"></canvas>
+		<br><br>
+		<button onClick="randomizeweapon();">Randomize!</button>
+		<br><br>
+		<div id=inputs>
+
+			<label>
+				<span class="a">Body</span>
+				<input type="range" min="1" max="28" value="1" class="slider" id="bodySlider"
+					oninput="setupweapon();document.getElementById('bodySliderNumberText').innerHTML=value+'/28';">
+				<span class="b" id='bodySliderNumberText'></span>
+				<input type="checkbox" id="randomizebody" name="randomizebody">Lock</label>
+
+			<label>
+				<span class="a">Barrel</span>
+				<input type="range" min="1" max="30" value="1" class="slider" id="barrelSlider"
+					oninput="setupweapon();document.getElementById('barrelSliderNumberText').innerHTML=value+'/30';">
+				<span class="b" id='barrelSliderNumberText'></span>
+				<input type="checkbox" id="randomizebarrel" name="randomizebarrel">Lock</label>
+
+			<label>
+				<span class="a">Stock</span>
+				<input type="range" min="1" max="22" value="1" class="slider" id="stockSlider"
+					oninput="setupweapon();document.getElementById('stockSliderNumberText').innerHTML=value+'/22';">
+				<span class="b" id='stockSliderNumberText'></span>
+				<input type="checkbox" id="randomizestock" name="randomizestock">Lock</label>
+
+			<label>
+				<span class="a">Scope</span>
+				<input type="range" min="0" max="19" value="1" class="slider" id="scopeSlider"
+					oninput="setupweapon();document.getElementById('scopeSliderNumberText').innerHTML=value+'/19';">
+				<span class="b" id='scopeSliderNumberText'></span>
+				<input type="checkbox" id="randomizescope" name="randomizescope">Lock</label>
+
+		</div>
+	</div>
+	<br>
+	<a target="_blank" id="download" download="Weapon_Builder.png"><button onClick="saveImage();"
+			class="button button2">Save</button></a>
+	<br><br>
+	<h4>Made by Entropy, Art by Zintoki (<a href="https://zintoki.itch.io/pixwep" target="_blank">PIXWEP - modular
+			weapons</a>) CC0 1.0</h4>
+	<h4>Not For NFT Use!</h4>
+</body>
+
+</html>
